@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техническая поддержка на русском языке | Вождь Отечественное ПО</title>
+    <meta name="description" content="Профессиональная техническая поддержка отечественного ПО на русском языке. Квалифицированные специалисты, быстрое решение проблем, консультации 24/7 для Битрикс24, Astra Linux, Р7-Офис">
+    <meta name="keywords" content="техническая поддержка ПО, поддержка на русском языке, техподдержка Битрикс24, поддержка Astra Linux, помощь по Р7-Офис, российское ПО, Вождь ПО">
+    <link rel="canonical" href="https://ваш-сайт.ru/tekhpodderzhka.html">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Техническая поддержка на русском языке | Вождь Отечественное ПО">
+    <meta property="og:description" content="Квалифицированная техническая поддержка отечественного ПО на русском языке. Быстрое решение проблем и консультации специалистов">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ваш-сайт.ru/tekhpodderzhka.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'VDS', Arial, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #e74c3c;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: var(--primary);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .breadcrumb {
+            background: #f5f5f5;
+            padding: 1rem 5%;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #666;
+        }
+
+        .consult-btn {
+            background: var(--accent); 
+            color: white; 
+            border: none; 
+            padding: 1rem 2rem; 
+            margin-top: 1rem; 
+            border-radius: 5px; 
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .consult-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .law-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .law-btn:hover {
+            background: #219653;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 5% 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            color: #ffeb3b;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Стили для страницы преимущества */
+        .benefit-page {
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .benefit-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .benefit-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .benefit-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .benefit-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .benefit-content h3 {
+            color: var(--secondary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+
+        .benefit-content p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #555;
+            font-size: 1.1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .benefit-content ul, .benefit-content ol {
+            margin: 1rem 0 1rem 1.5rem;
+            line-height: 1.7;
+            padding-right: 1rem;
+        }
+
+        .benefit-content li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .benefit-content strong {
+            color: var(--primary);
+        }
+
+        .benefit-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+            transition: transform 0.3s;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .feature-card p {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .back-to-benefits {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+        }
+
+        .back-to-benefits:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        /* Специфические стили для страницы поддержки */
+        .support-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .support-channels {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .channel-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .channel-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            width: 50px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .channel-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .channel-text strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .channel-text p {
+            margin: 0;
+            color: #666;
+        }
+
+        .special-offer {
+            background: #e8f4fd;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .special-offer h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .breadcrumb {
+                margin-top: 60px;
+                padding: 0.8rem 5%;
+                font-size: 0.8rem;
+            }
+
+            .benefit-hero {
+                padding: 2rem 1rem;
+                margin: 0 0 2rem 0;
+                border-radius: 10px;
+            }
+
+            .benefit-hero h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+
+            .benefit-hero p {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            .benefit-content {
+                padding: 1.5rem;
+                margin: 0 0 2rem 0;
+                border-radius: 10px;
+            }
+
+            .benefit-content h2 {
+                font-size: 1.4rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            .benefit-content h3 {
+                font-size: 1.2rem;
+                margin: 1.5rem 0 0.8rem 0;
+            }
+
+            .benefit-content p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .benefit-content li {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .benefit-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .feature-card {
+                padding: 1rem;
+            }
+
+            .feature-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .support-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .channel-list {
+                grid-template-columns: 1fr;
+            }
+
+            .channel-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 1rem;
+            }
+
+            .channel-icon {
+                margin-right: 0;
+                margin-bottom: 0.8rem;
+                font-size: 2.5rem;
+            }
+
+            .consult-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .special-offer {
+                padding: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .footer-column {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .support-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .benefit-content {
+                padding: 1rem;
+            }
+            
+            .benefit-features {
+                gap: 0.8rem;
+            }
+
+            .channel-item {
+                padding: 1rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+
+    <header>
+        <nav>
+            <div class="logo">Вождь Отечественное ПО</div>
+            <div class="nav-links">
+                <a href="index.html#products">Продукты</a>
+                <a href="index.html#benefits">Преимущества</a>
+                <a href="index.html#about">О компании</a>
+                <a href="index.html#contact">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="index.html">Главная</a>
+        <span>›</span>
+        <a href="index.html#benefits">Преимущества</a>
+        <span>›</span>
+        <span>Техническая поддержка на русском языке</span>
+    </nav>
+
+    <section class="benefit-page">
+        <div class="benefit-hero">
+            <h1>Техническая поддержка на русском языке</h1>
+            <p>Квалифицированная помощь от российских специалистов без языкового барьера</p>
+        </div>
+
+        <div class="benefit-content">
+            <h2>Профессиональная техническая поддержка отечественного ПО</h2>
+            
+            <p>Компания «Вождь Отечественное ПО» предоставляет полный спектр услуг по технической поддержке российского программного обеспечения. Наша команда специалистов гарантирует оперативное решение любых технических вопросов и обеспечивает бесперебойную работу ваших бизнес-процессов.</p>
+
+            <div class="support-stats">
+                <div class="stat-card">
+                    <span class="stat-number">15 мин</span>
+                    <span class="stat-label">Среднее время ответа</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Доступность поддержки</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Решенных обращений</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">RU</span>
+                    <span class="stat-label">Родной язык общения</span>
+                </div>
+            </div>
+
+            <h3>Преимущества нашей технической поддержки</h3>
+
+            <div class="benefit-features">
+                <div class="feature-card">
+                    <h4>Русскоязычные специалисты</h4>
+                    <p>Общайтесь на родном языке без языкового барьера и недопонимания</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Глубокие знания продукции</h4>
+                    <p>Наши специалисты сертифицированы и имеют многолетний опыт работы с отечественным ПО</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Быстрое реагирование</h4>
+                    <p>Среднее время ответа на запрос - не более 15 минут в рабочее время</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Многоканальная поддержка</h4>
+                    <p>Обращайтесь через удобный для вас канал связи: телефон, email, чат, мессенджеры</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Проактивный мониторинг</h4>
+                    <p>Предупредим о возможных проблемах до их возникновения</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Персональный менеджер</h4>
+                    <p>Закрепленный специалист, знающий особенности вашей инфраструктуры</p>
+                </div>
+            </div>
+
+            <h3>Каналы связи с технической поддержкой</h3>
+
+            <div class="support-channels">
+                <div class="channel-list">
+                    <div class="channel-item">
+                        <div class="channel-icon">📞</div>
+                        <div class="channel-text">
+                            <strong>Телефонная поддержка</strong>
+                            <p>+7 (999) 527-45-52 (круглосуточно)</p>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon">✉️</div>
+                        <div class="channel-text">
+                            <strong>Электронная почта</strong>
+                            <p>support@vojjdpo.ru (ответ в течение 1 часа)</p>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon">💬</div>
+                        <div class="channel-text">
+                            <strong>Онлайн-чат</strong>
+                            <p>На сайте (рабочее время с 9:00 до 18:00)</p>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon">🔄</div>
+                        <div class="channel-text">
+                            <strong>Система тикетов</strong>
+                            <p>Личный кабинет с историей обращений</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Решаемые задачи технической поддержки</h3>
+            <ul>
+                <li><strong>Консультации по установке и настройке</strong> - помощь в развертывании Битрикс24, Astra Linux, Р7-Офис и другого российского ПО</li>
+                <li><strong>Решение технических проблем</strong> - оперативное устранение неисправностей и ошибок в работе программ</li>
+                <li><strong>Обновления и миграция</strong> - помощь в обновлении версий и переносе данных между системами</li>
+                <li><strong>Интеграция с другими системами</strong> - настройка взаимодействия между различными программными продуктами</li>
+                <li><strong>Восстановление после сбоев</strong> - оперативное восстановление работоспособности систем</li>
+                <li><strong>Консультации по лицензированию</strong> - помощь в вопросах лицензирования и соблюдения законодательства</li>
+            </ul>
+
+            <h3>Почему выбирают нашу техническую поддержку?</h3>
+            <p>В отличие от зарубежных вендоров, мы понимаем особенности российского бизнеса и законодательства. Наши специалисты говорят с вами на одном языке, как в прямом, так и в переносном смысле. Мы знаем специфику работы с ФЗ-152, требования регуляторов и особенности российского документооборота.</p>
+
+            <h3>Тарифы технической поддержки</h3>
+            <p>Мы предлагаем гибкую систему тарифов, адаптированную под потребности вашего бизнеса - от базовой поддержки для малого бизнеса до премиум-обслуживания для крупных предприятий и госучреждений.</p>
+
+            <div class="special-offer">
+                <h4>🚀 Специальное предложение для новых клиентов</h4>
+                <p>При заказе внедрения любого отечественного ПО получите <strong>3 месяца технической поддержки бесплатно</strong>. Наши специалисты помогут настроить систему и научат ваших сотрудников эффективно работать с новым программным обеспечением.</p>
+            </div>
+
+            <a href="https://forms.amocrm.ru/rctlwtl" class="consult-btn" style="margin-top: 2rem;">
+                Получить консультацию по поддержке
+            </a>
+        </div>
+
+        <a href="index.html#benefits" class="back-to-benefits">← Вернуться к списку преимуществ</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Продукты</h4>
+                <a href="/bitrix24.html">Битрикс24</a>
+                <a href="/astra-linux.html">Astra Linux</a>
+                <a href="/r7-office.html">Р7-Офис</a>
+                <a href="/alt.html">ОС Альт</a>
+                <a href="/myoffice.html">МойОфис</a>
+            </div>
+            <div class="footer-column">
+                <h4>Преимущества</h4>
+                <a href="bezopasnost-fz152.html">Безопасность и ФЗ-152</a>
+                <a href="tekhpodderzhka.html">Техподдержка</a>
+                <a href="importozameshchenie.html">Импортозамещение</a>
+                <a href="lokalizaciya.html">Локализация</a>
+                <a href="ekonomiya-licenziy.html">Экономия на лицензиях</a>
+                <a href="vnedrenie-pod-klyuch.html">Внедрение под ключ</a>
+            </div>
+            <div class="footer-column">
+                <h4>Компания</h4>
+                <a href="index.html#about">О нас</a>
+                <a href="index.html#benefits">Преимущества</a>
+                <a href="index.html#contact">Контакты</a>
+                <a href="/news.html">Новости</a>
+            </div>
+            <div class="footer-column">
+                <h4>Услуги</h4>
+                <a href="/consultation.html">Консультация</a>
+                <a href="/implementation.html">Внедрение</a>
+                <a href="/support.html">Техподдержка</a>
+                <a href="/training.html">Обучение</a>
+            </div>
+            <div class="footer-column">
+                <h4>Контакты</h4>
+                <p style="color: #ccc; margin: 0.5rem 0;">+7 (999) 527-45-52</p>
+                <p style="color: #ccc; margin: 0.5rem 0;">vojjdpo@gmail.com</p>
+                <p style="color: #ccc; margin: 0.5rem 0;">г. Тында, ул. Олимпийская, 7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Вождь Отечественное ПО. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Schema.org микроразметка для статьи -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Техническая поддержка на русском языке для компании Вождь ПО",
+      "description": "Квалифицированная техническая поддержка отечественного ПО на русском языке. Быстрое реагирование на запросы и решение проблем",
+      "author": {
+        "@type": "Organization",
+        "name": "Вождь Отечественное ПО"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Вождь Отечественное ПО",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ваш-сайт.ru/logo.png"
+        }
+      },
+      "datePublished": "2025-01-20",
+      "dateModified": "2025-01-20",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ваш-сайт.ru/tekhpodderzhka.html"
+      },
+      "articleBody": "Компания «Вождь Отечественное ПО» предоставляет профессиональную техническую поддержку российского программного обеспечения на русском языке. Наши специалисты сертифицированы и имеют многолетний опыт работы с Битрикс24, Astra Linux, Р7-Офис и другим отечественным ПО. Среднее время ответа на запрос - 15 минут, доступность поддержки 24/7. Предлагаем многоканальную поддержку через телефон, email, онлайн-чат и систему тикетов."
+    }
+    </script>
+</body>
+</html>
