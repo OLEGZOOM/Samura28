@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отечественное ПО - официальный дистрибьютор Битрикс24, Astra Linux, Р7-Офис</title>
+    <meta name="description" content="Официальный дистрибьютор российского ПО: Битрикс24, Astra Linux, Альт, Р7-Офис, МойОфис. Внедрение и поддержка для бизнеса и госучреждений.">
+    <meta name="keywords" content="отечественное ПО, российское программное обеспечение, Битрикс24, Astra Linux, Р7-Офис, Альт, МойОфис, импортозамещение, ФЗ-152, безопасность данных">
+    <link rel="canonical" href="https://ваш-сайт.ru/">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Отечественное ПО - официальный дистрибьютор">
+    <meta property="og:description" content="Внедрение российского программного обеспечения для бизнеса и госучреждений">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ваш-сайт.ru/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'VDS', Arial, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #e74c3c;
+        }
+
+        body {
+            padding-top: 140px; /* Добавляем отступ для фиксированного заголовка и хлебных крошек */
+        }
+
+        header {
+            background: var(--primary);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 80px; /* Фиксированная высота заголовка */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .breadcrumb {
+            background: #f5f5f5;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 80px; /* Размещаем под заголовком */
+            z-index: 999;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ddd;
+            height: 60px; /* Фиксированная высота хлебных крошек */
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #666;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 5% 3rem;
+            text-align: center;
+            margin-top: 0; /* Убираем лишний отступ */
+        }
+
+        .consult-btn {
+            background: var(--accent); 
+            color: white; 
+            border: none; 
+            padding: 1rem 2rem; 
+            margin-top: 1rem; 
+            border-radius: 5px; 
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .consult-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .product-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .product-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Новый стиль для кнопки ФЗ-152 */
+        .law-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .law-btn:hover {
+            background: #219653;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .products {
+            padding: 3rem 5%;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            max-width: 100px;
+            height: auto;
+            margin: 0 auto 1rem auto;
+            display: block;
+        }
+
+        .benefits {
+            background: #f9f9f9;
+            padding: 3rem 5%;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .contact {
+            background: #f5f5f5;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 5% 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            color: #ffeb3b;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Новые стили для страниц преимуществ */
+        .benefit-page {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        .benefit-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .benefit-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .benefit-content h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .benefit-content p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .benefit-content ul, .benefit-content ol {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 1.7;
+        }
+
+        .benefit-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-benefits {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-to-benefits:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px; /* Уменьшаем отступ для мобильных */
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .breadcrumb {
+                top: 60px; /* Уменьшаем отступ для мобильных */
+                height: 50px;
+                padding: 0.8rem 5%;
+            }
+
+            header {
+                height: 60px; /* Уменьшаем высоту заголовка для мобильных */
+                padding: 0.8rem 5%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .benefit-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .benefit-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Стили для всплывающего окна - УМЕНЬШЕНА ВЫСОТА */
+        #countdown-popup {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .popup-content {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: white;
+            margin: 15% auto;
+            padding: 20px 22.5px;
+            width: 72.9%;
+            max-width: 405px;
+            height: auto;
+            min-height: 280px;
+            text-align: center;
+            border-radius: 10.8px;
+            position: relative;
+            box-shadow: 0 7.2px 22.5px rgba(0,0,0,0.3);
+            border: 1.8px solid #e74c3c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .close-popup {
+            color: white;
+            position: absolute;
+            top: 8px;
+            right: 16.2px;
+            font-size: 22.5px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .close-popup:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        #countdown-timer {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ffeb3b;
+            font-family: 'Courier New', monospace;
+            text-shadow: 1.8px 1.8px 3.6px rgba(0,0,0,0.3);
+        }
+
+        .popup-title {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #ffeb3b;
+        }
+
+        .popup-offer {
+            font-size: 0.85em;
+            margin: 8px 0;
+            line-height: 1.3;
+        }
+
+        .popup-consult-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 24.3px;
+            margin-top: 12px;
+            border-radius: 6.3px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .popup-consult-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2.7px);
+            box-shadow: 0 4.5px 13.5px rgba(0,0,0,0.2);
+        }
+
+        .timer-label {
+            font-size: 0.75em;
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .popup-content {
+                margin: 25% auto;
+                padding: 15px 18px;
+                width: 76.5%;
+                min-height: 250px;
+            }
+
+            #countdown-timer {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+
+    <header>
+        <nav>
+            <div class="logo">Вождь Отечественное ПО</div>
+            <div class="nav-links">
+                <a href="#products">Продукты</a>
+                <a href="#benefits">Преимущества</a>
+                <a href="#about">О компании</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumb">
+        <a href="/">Главная</a>
+        <span>›</span>
+        <span>Отечественное программное обеспечение</span>
+    </nav>
+
+    <section class="hero">
+        <h1>Официальный дистрибьютор отечественного программного обеспечения</h1>
+        <p>Комплексные решения для бизнеса и государственных учреждений России</p>
+        <a href="https://forms.amocrm.ru/rctlwtl" class="consult-btn">
+            Получить консультацию
+        </a>
+    </section>
+
+    <section id="products" class="products"> 
+        <h2>Каталог российского ПО для бизнеса и госучреждений</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://learn.mgsu.ru/pluginfile.php/193853/course/overviewfiles/bitrix24_2x-1660135947_1x.png" alt="Битрикс24 - корпоративный портал и CRM система для управления бизнесом" width="100" height="100">
+                <h3>Битрикс24</h3>
+                <p>Корпоративный портал и система управления бизнес-процессами с CRM и инструментами collaboration</p>
+                <a href="https://www.bitrix24.ru" target="_blank" class="product-btn">Подробнее о Битрикс24</a>
+            </div>
+            <div class="product-card">
+                <img src="https://geosensor.ru/int/img/AstraLinux.png" alt="Astra Linux - безопасная операционная система для государственных учреждений" width="100" height="100">
+                <h3>Astra Linux</h3>
+                <p>Безопасная операционная система для государственных учреждений с сертификатами ФСТЭК</p>
+                <a href="https://astralinux.ru/" target="_blank" class="product-btn">Подробнее об Astra Linux</a>
+            </div>
+            <div class="product-card">
+                <img src="https://nevateka.ru/upload/iblock/958/2rccrnd3y3a2xn6jh3p8n7h22mj37dp9/9428757f02f66186806fb14ec5fedfc8ae443cbdadc199511fbcdf2c744cd3ee.png" alt="Альт - семейство операционных систем на основе Linux для серверов и рабочих станций" width="100" height="100">
+                <h3>Альт</h3>
+                <p>Семейство операционных систем на основе Linux для серверов и рабочих станций</p>
+                <a href="https://www.basealt.ru/" target="_blank" class="product-btn">Подробнее об ОС Альт</a>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn-ru.bitrix24.ru/b18436662/landing/ac1/ac1cea6fef33291b04c0bf846047e9f3/Dizayn_bez_nazvaniya_8_1x.png" alt="Р7-Офис - офисный пакет для совместной работы с документами" width="100" height="100">
+                <h3>Р7-Офис</h3>
+                <p>Полнофункциональный офисный пакет для совместной работы с документами и таблицами</p>
+                <a href="https://r7-office.ru/" target="_blank" class="product-btn">Подробнее о Р7-Офис</a>
+            </div>
+            <div class="product-card">
+                <img src="https://rtmtech.ru/wp-content/uploads/2023/04/MyOffice_horizontal_RU_1.png" alt="МойОфис - офисные приложения для корпоративных пользователей и госсектора" width="100" height="100">
+                <h3>МойОфис</h3>
+                <p>Офисные приложения для корпоративных пользователей и государственного сектора</p>
+                <a href="https://myoffice.ru" target="_blank" class="product-btn">Подробнее о МойОфис</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <h2>Преимущества отечественного программного обеспечения</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Безопасность и соответствие ФЗ-152</h3>
+                <p>Все представленные программы соответствуют требованиям российского законодательства о защите персональных данных и имеют необходимые сертификаты ФСТЭК.</p>
+                <!-- Обновленная кнопка для перехода на страницу преимущества -->
+                <a href="bezopasnost-fz152.html" class="law-btn">
+                    📋 Подробнее о безопасности
+                </a>
+            </div>
+            <div class="benefit-card">
+                <h3>Техническая поддержка на русском языке</h3>
+                <p>Квалифицированная помощь от российских специалистов без языкового барьера. Быстрое реагирование на запросы и решение проблем.</p>
+                <a href="tekhpodderzhka.html" class="law-btn">
+                    💬 Подробнее о поддержке
+                </a>
+            </div>
+            <div class="benefit-card">
+                <h3>Импортозамещение без потери функциональности</h3>
+                <p>Полноценная замена зарубежного ПО с сохранением всех бизнес-процессов. Совместимость с российскими аппаратными решениями.</p>
+                <a href="importozameshchenie.html" class="law-btn">
+                    🔄 Подробнее об импортозамещении
+                </a>
+            </div>
+            <div class="benefit-card">
+                <h3>Локализация и адаптация под российские стандарты</h3>
+                <p>Учет особенностей российского документооборота, налогового учета и требования к отчетности.</p>
+                <a href="lokalizaciya.html" class="law-btn">
+                    🌍 Подробнее о локализации
+                </a>
+            </div>
+            <div class="benefit-card">
+                <h3>Снижение затрат на лицензирование</h3>
+                <p>Конкурентные цены на лицензии и обновления. Гибкие условия лицензирования для государственных и коммерческих организаций.</p>
+                <a href="ekonomiya-licenziy.html" class="law-btn">
+                    💰 Подробнее об экономии
+                </a>
+            </div>
+            <div class="benefit-card">
+                <h3>Обучение и внедрение "под ключ"</h3>
+                <p>Полный цикл услуг: от консультации и подбора решения до обучения персонала и технической поддержки.</p>
+                <a href="vnedrenie-pod-klyuch.html" class="law-btn">
+                    🎯 Подробнее о внедрении
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="padding: 3rem 5%;">
+        <h2>О компании Вождь Отечественное ПО</h2>
+        <h3 style="color: var(--primary); margin: 1rem 0 0.5rem 0;">Технологический суверенитет России</h3>
+        <p style="margin-top: 1rem; line-height: 1.6; color: #555;">
+            Мы специализируемся на распространении и внедрении отечественного программного обеспечения. 
+            Наша миссия - способствовать технологическому суверенитету России через предоставление 
+            надежных и безопасных программных решений для бизнеса и государственных учреждений.
+        </p>
+        <p style="margin-top: 1rem; line-height: 1.6; color: #555;">
+            Более 5 лет мы помогаем организациям переходить на российское ПО, обеспечивая полный цикл 
+            сопровождения: от первичной консультации до технической поддержки после внедрения.
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <div style="margin-top: 2rem;">
+            <p><strong>Телефон:</strong> +7 (999) 527-45-52</p>
+            <p><strong>Email:</strong> vojjdpo@gmail.com</p>
+            <p><strong>Адрес:</strong> г. Тында, ул. Олимпийская, 7</p>
+            <p><strong>Режим работы:</strong> Пн-Пт: 9:00-18:00</p>
+        </div>
+        <a href="https://forms.amocrm.ru/rctlwtl" class="consult-btn" style="margin-top: 2rem;">
+            Заказать обратный звонок
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Продукты</h4>
+                <a href="/bitrix24.html">Битрикс24</a>
+                <a href="/astra-linux.html">Astra Linux</a>
+                <a href="/r7-office.html">Р7-Офис</a>
+                <a href="/alt.html">ОС Альт</a>
+                <a href="/myoffice.html">МойОфис</a>
+            </div>
+            <div class="footer-column">
+                <h4>Преимущества</h4>
+                <a href="bezopasnost-fz152.html">Безопасность и ФЗ-152</a>
+                <a href="tekhpodderzhka.html">Техподдержка</a>
+                <a href="importozameshchenie.html">Импортозамещение</a>
+                <a href="lokalizaciya.html">Локализация</a>
+                <a href="ekonomiya-licenziy.html">Экономия на лицензиях</a>
+                <a href="vnedrenie-pod-klyuch.html">Внедрение под ключ</a>
+            </div>
+            <div class="footer-column">
+                <h4>Компания</h4>
+                <a href="#about">О нас</a>
+                <a href="#benefits">Преимущества</a>
+                <a href="#contact">Контакты</a>
+                <a href="/news.html">Новости</a>
+            </div>
+            <div class="footer-column">
+                <h4>Услуги</h4>
+                <a href="/consultation.html">Консультация</a>
+                <a href="/implementation.html">Внедрение</a>
+                <a href="/support.html">Техподдержка</a>
+                <a href="/training.html">Обучение</a>
+            </div>
+            <div class="footer-column">
+                <h4>Контакты</h4>
+                <p style="color: #ccc; margin: 0.5rem 0;">+7 (999) 527-45-52</p>
+                <p style="color: #ccc; margin: 0.5rem 0;">vojjdpo@gmail.com</p>
+                <p style="color: #ccc; margin: 0.5rem 0;">г. Тында, ул. Олимпийская, 7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Вождь Отечественное ПО. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up с обратным отсчетом (уменьшена высота) -->
+    <div id="countdown-popup" class="popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <div class="popup-title">🚀 Специальное предложение!</div>
+            <div class="popup-offer">
+                Получите бесплатную консультацию по подбору отечественного ПО<br>
+                и скидку 15% на первое внедрение!
+            </div>
+            <div>Предложение действует:</div>
+            <div id="countdown-timer">
+                <span id="minutes">10</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-label">минуты : секунды</div>
+            <a href="https://forms.amocrm.ru/rctlwtl" class="popup-consult-btn">
+                Получить консультацию
+            </a>
+            <div style="font-size: 0.7em; margin-top: 10px; color: #ccc;">
+                *Предложение действительно для новых клиентов
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Pop-up с обратным отсчетом
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById("countdown-popup");
+            const closeBtn = document.querySelector(".close-popup");
+            const minutesDisplay = document.getElementById("minutes");
+            const secondsDisplay = document.getElementById("seconds");
+            const countdownTimer = document.getElementById("countdown-timer");
+            
+            // Настройки таймера (10 минут)
+            let totalSeconds = 10 * 60; // 10 минут в секундах
+            let countdownActive = true;
+            
+            // Функция обратного отсчета
+            function updateCountdown() {
+                if (!countdownActive) return;
+                
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+                
+                minutesDisplay.textContent = minutes.toString().padStart(2, '0');
+                secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+                
+                // Меняем цвет когда остается мало времени
+                if (minutes === 0 && seconds <= 30) {
+                    countdownTimer.style.color = '#ff5252';
+                    countdownTimer.classList.add('pulse');
+                }
+                
+                if (totalSeconds <= 0) {
+                    countdownActive = false;
+                    countdownTimer.textContent = "Время вышло!";
+                    countdownTimer.style.color = '#ff5252';
+                    // Автоматически скрыть через 3 секунды после окончания времени
+                    setTimeout(() => {
+                        popup.style.display = "none";
+                    }, 3000);
+                } else {
+                    totalSeconds--;
+                    setTimeout(updateCountdown, 1000);
+                }
+            }
+            
+            // Показать pop-up через 8 секунд после загрузки страницы
+            setTimeout(function() {
+                popup.style.display = "block";
+                updateCountdown();
+            }, 8000);
+
+            // Закрыть pop-up при клике на крестик
+            closeBtn.onclick = function() {
+                popup.style.display = "none";
+                countdownActive = false;
+            }
+
+            // Закрыть pop-up при клике вне его области
+            window.onclick = function(event) {
+                if (event.target === popup) {
+                    popup.style.display = "none";
+                    countdownActive = false;
+                }
+            }
+
+            // Триггер при попытке уйти со страницы (движение мыши за пределы окна)
+            document.addEventListener('mouseout', function(event) {
+                if (event.clientY < 50 && popup.style.display !== 'block') {
+                    popup.style.display = "block";
+                    if (countdownActive) {
+                        updateCountdown();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Schema.org микроразметка -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Вождь Отечественное ПО",
+      "url": "https://ваш-сайт.ru",
+      "description": "Официальный дистрибьютор российского программного обеспечения: Битрикс24, Astra Linux, Р7-Офис, Альт, МойОфис",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Олимпийская, 7",
+        "addressLocality": "Тында",
+        "addressCountry": "RU"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+7-999-527-45-52",
+        "contactType": "customer service",
+        "email": "vojjdpo@gmail.com",
+        "availableLanguage": "Russian"
+      },
+      "sameAs": []
+    }
+    </script>
+</body>
+</html>
